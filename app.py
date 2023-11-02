@@ -14,7 +14,7 @@ def read_uploaded_image(uploaded_image):
 
 # Main Streamlit app
 def main():
-    st.title('Image Processing with Streamlit')
+    st.title('Image Segmentation with Streamlit')
 
     st.sidebar.header('Upload an Image')
     uploaded_image = st.sidebar.file_uploader('Choose an image', type=['jpg', 'png', 'jpeg'])
@@ -24,7 +24,7 @@ def main():
         original_image = cv2.cvtColor(original_image, cv2.COLOR_RGB2BGR)
         # st_display_image(original_image, caption='Original Image')
 
-        st.sidebar.header('Image Processing Options')
+        st.sidebar.header('Image Segmentation Options')
         image_processing_option = st.sidebar.selectbox('Choose an image processing technique:',
                                                         ['Canny Edge Detection', 'Thresholding', 'GrabCut', 'Watershed'])
 
